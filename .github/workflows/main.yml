@@ -16,7 +16,7 @@ jobs:
       - name: Adding Known Hosts
         run: ssh-keyscan -H datalab.myconnectech.fr >> ~/.ssh/known_hosts
       - name: Deploy with rsync
-        run: rsync -avz . etienne@datalab.myconnectech.fr:~
+        run: rsync -avz . etienne@datalab.myconnectech.fr:~/hello_world
       - uses: ./action-a
         with:
           MY_NAME: ${{ secrets.MY_NAME }}
