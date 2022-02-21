@@ -19,4 +19,4 @@ jobs:
         run: rsync -avz . etienne@datalab.myconnectech.fr:~
       - uses: ./action-a
         with:
-          MY_NAME: "Goudot"
+          MY_NAME: ${{ secrets.MY_NAME }}
